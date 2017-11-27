@@ -1,8 +1,8 @@
-var add = function(number1, number2){
- return number1 + number2;
+var userHeight = parseInt(prompt("What is your height in cm: "));
+var userWeight = parseInt(prompt("What is your weight in kgs: "));
+
+var bmi = function(userHeight, userWeight){
+  return (userWeight / (userHeight * userHeight / 10000)).toPrecision(4);
 };
 
-var number1 = parseInt(prompt("Enter a number: "));
-var number2 = parseInt(prompt("Enter another number: "));
-
-alert(add(number1,number2));
+alert("Your BMI is " + bmi(userHeight, userWeight));
